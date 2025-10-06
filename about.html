@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SpizyNation - Our Story</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #e63946;
+        }
+        .team-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+    </style>
+</head>
+<body class="bg-creamy">
+    <!-- Navigation -->
+    <nav class="bg-rich text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i data-feather="coffee" class="text-golden"></i>
+                <span class="font-bold text-xl">SpizyNation</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="hover:text-golden">Home</a>
+                <a href="#" class="text-golden font-medium">About</a>
+                <a href="menu.html" class="hover:text-golden">Menu</a>
+                <a href="contact.html" class="hover:text-golden">Contact</a>
+</div>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-rich w-full px-6 py-3" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-white hover:text-golden">Home</a>
+                <a href="#" class="text-golden font-medium">About</a>
+                <a href="menu.html" class="text-white hover:text-golden">Menu</a>
+                <a href="contact.html" class="text-white hover:text-golden">Contact</a>
+</div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-r from-rich to-spicy">
+        <div class="container mx-auto px-6 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
+            <p class="text-xl md:text-2xl">Simple, honest food in Jaripatka since February 2025</p>
+        </div>
+    </section>
+<!-- Our Journey -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-rich mb-12">Our Journey</h2>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-spicy transform -translate-x-1/2"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-12 pl-12 md:pl-0">
+                    <!-- Item 1 -->
+                    <div class="relative timeline-item">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold text-rich">2025 - Opening in Jaripatka</h3>
+                        <p class="text-gray-600">Started our small restaurant in Nagpur</p>
+</div>
+                            <div class="md:w-1/2 md:pl-12">
+                            <p class="text-gray-700">We opened in February 2025 with a simple menu of local favorites cooked fresh daily.</p>
+</div>
+                        </div>
+                    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Philosophy -->
+    <section class="py-16 bg-creamy">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-rich mb-12">Our Philosophy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <div class="mb-4">
+                            <i data-feather="heart" class="w-12 h-12 mx-auto text-spicy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-rich">Good Food</h3>
+                        <p class="text-gray-600">We focus on tasty, satisfying meals at fair prices.</p>
+                    </div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="mb-4">
+                        <i data-feather="award" class="w-12 h-12 mx-auto text-spicy"></i>
+                    </div>
+                        <h3 class="text-xl font-bold mb-4 text-rich">Local Sourcing</h3>
+                        <p class="text-gray-600">We use fresh ingredients from local markets.</p>
+</div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="mb-4">
+                        <i data-feather="users" class="w-12 h-12 mx-auto text-spicy"></i>
+                    </div>
+                        <h3 class="text-xl font-bold mb-4 text-rich">Friendly Service</h3>
+                        <p class="text-gray-600">We treat all customers with respect and care.</p>
+</div>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer class="bg-rich text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-golden">SpizyNation</h3>
+            <p class="mb-4">Authentic flavors of Nagpur since February 2025</p>
+<div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-golden"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-white hover:text-golden"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-white hover:text-golden"><i data-feather="twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-golden">Home</a></li>
+                        <li><a href="#" class="text-golden">About</a></li>
+                        <li><a href="menu.html" class="hover:text-golden">Menu</a></li>
+</ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1"></i>
+                            <span>Jaripatka, Nagpur, Maharashtra</span>
+</li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="mr-2"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="mr-2"></i>
+                            <span>contact@spizynation.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Opening Hours</h4>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>11AM - 11PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday - Sunday</span>
+                            <span>10AM - 11:30PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 SpizyNation. All rights reserved.</p>
+</div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

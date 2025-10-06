@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - SpizyNation</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .menu-category.active {
+            border-bottom: 3px solid #e63946;
+            color: #e63946;
+        }
+        .menu-item:hover {
+            transform: translateX(5px);
+        }
+        .veg-icon {
+            color: #2e8b57;
+        }
+        .nonveg-icon {
+            color: #e63946;
+        }
+    </style>
+</head>
+<body class="bg-creamy">
+    <!-- Navigation -->
+    <nav class="bg-rich text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <i data-feather="coffee" class="text-golden"></i>
+                <span class="font-bold text-xl">SpizyNation</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="hover:text-golden">Home</a>
+                <a href="about.html" class="hover:text-golden">About</a>
+                <a href="#" class="text-golden font-medium">Menu</a>
+</div>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-rich w-full px-6 py-3" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-white hover:text-golden">Home</a>
+                <a href="about.html" class="text-white hover:text-golden">About</a>
+                <a href="#" class="text-golden font-medium">Menu</a>
+</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center py-20" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://static.photos/food/1200x630/30');">
+        <div class="container mx-auto px-6 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Menu</h1>
+            <p class="text-xl md:text-2xl">Authentic flavors crafted with love</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="py-12 bg-white sticky top-0 z-10 shadow-sm">
+        <div class="container mx-auto px-6 overflow-x-auto">
+            <div class="flex space-x-8 whitespace-nowrap pb-2">
+                <button class="menu-category active px-4 py-2 font-medium" data-category="starters">Starters</button>
+                <button class="menu-category px-4 py-2 font-medium" data-category="main-course">Main Course</button>
+                <button class="menu-category px-4 py-2 font-medium" data-category="rice">Rice & Biryani</button>
+                <button class="menu-category px-4 py-2 font-medium" data-category="desserts">Desserts</button>
+                <button class="menu-category px-4 py-2 font-medium" data-category="beverages">Beverages</button>
+            </div>
+</div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="py-12 bg-creamy">
+        <div class="container mx-auto px-6">
+            <!-- Starters -->
+            <div class="menu-section" id="starters">
+                <h2 class="text-3xl font-bold text-rich mb-8">Starters</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Vegetable Samosa</h3>
+                                <p class="text-gray-600">Crispy pastry filled with spiced potatoes and peas</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹80</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Chicken 65</h3>
+                                <p class="text-gray-600">Spicy, deep-fried chicken cubes with curry leaves</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹220</span>
+                                <i data-feather="circle" class="nonveg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Paneer Tikka</h3>
+                                <p class="text-gray-600">Cottage cheese marinated in spices and grilled</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹180</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Prawns Fry</h3>
+                                <p class="text-gray-600">Succulent prawns marinated in special spices</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹280</span>
+                                <i data-feather="circle" class="nonveg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Course (hidden by default) -->
+            <div class="menu-section hidden" id="main-course">
+                <h2 class="text-3xl font-bold text-rich mb-8">Main Course</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Butter Chicken</h3>
+                                <p class="text-gray-600">Tandoori chicken in rich tomato and butter gravy</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹240</span>
+                                <i data-feather="circle" class="nonveg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Paneer Butter Masala</h3>
+                                <p class="text-gray-600">Cottage cheese in creamy tomato gravy</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹200</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Fish Curry</h3>
+                                <p class="text-gray-600">Fresh fish in coconut based gravy</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹260</span>
+                                <i data-feather="circle" class="nonveg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Dal Tadka</h3>
+                                <p class="text-gray-600">Yellow lentils tempered with ghee and spices</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹150</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Rice & Biryani (hidden by default) -->
+            <div class="menu-section hidden" id="rice">
+                <h2 class="text-3xl font-bold text-rich mb-8">Rice & Biryani</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Vegetable Biryani</h3>
+                                <p class="text-gray-600">Fragrant basmati rice cooked with vegetables and spices</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹180</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Chicken Biryani</h3>
+                                <p class="text-gray-600">Traditional dum cooked biryani with chicken</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹240</span>
+                                <i data-feather="circle" class="nonveg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Jeera Rice</h3>
+                                <p class="text-gray-600">Basmati rice tempered with cumin seeds</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹120</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Mutton Biryani</h3>
+                                <p class="text-gray-600">Rich biryani with tender mutton pieces</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹280</span>
+                                <i data-feather="circle" class="nonveg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desserts (hidden by default) -->
+            <div class="menu-section hidden" id="desserts">
+                <h2 class="text-3xl font-bold text-rich mb-8">Desserts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Gulab Jamun</h3>
+                                <p class="text-gray-600">Soft milk dumplings in sugar syrup</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹120</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Rasmalai</h3>
+                                <p class="text-gray-600">Cottage cheese patties in sweetened milk</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹140</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Kulfi</h3>
+                                <p class="text-gray-600">Traditional Indian ice cream</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹90</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Gajar Halwa</h3>
+                                <p class="text-gray-600">Carrot pudding with nuts</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹130</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Beverages (hidden by default) -->
+            <div class="menu-section hidden" id="beverages">
+                <h2 class="text-3xl font-bold text-rich mb-8">Beverages</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Masala Chai</h3>
+                                <p class="text-gray-600">Spiced Indian tea with milk</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹40</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Mango Lassi</h3>
+                                <p class="text-gray-600">Sweet yogurt drink with mango</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹80</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Fresh Lime Soda</h3>
+                                <p class="text-gray-600">Sparkling drink with lime and mint</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹60</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm menu-item transition duration-300">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-rich mb-1">Cold Coffee</h3>
+                                <p class="text-gray-600">Iced coffee with milk and sugar</p>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold text-golden mr-2">₹90</span>
+                                <i data-feather="circle" class="veg-icon w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <!-- Special Thali -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-rich mb-12">Special Thali</h2>
+            <div class="bg-gradient-to-r from-golden to-spicy p-1 rounded-xl">
+                <div class="bg-creamy rounded-xl p-8">
+                    <div class="md:pl-12">
+                        <h3 class="text-2xl font-bold text-rich mb-4">SpizyNation Special Thali</h3>
+                        <p class="text-gray-600 mb-4">Experience the complete SpizyNation experience with our signature thali that includes:</p>
+                        <ul class="list-disc pl-5 text-gray-700 mb-6">
+                            <li>2 Main Course dishes</li>
+                            <li>Dal & Rice</li>
+                            <li>2 Rotis</li>
+                            <li>Starter</li>
+                            <li>Dessert</li>
+                            <li>Papad & Pickle</li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-golden">₹350</span>
+                            <button class="bg-spicy text-white px-6 py-2 rounded-full hover:bg-red-600 transition duration-300">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer class="bg-rich text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-golden">SpizyNation</h3>
+                    <p class="mb-4">Authentic flavors of Nagpur since 1995</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-golden"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-white hover:text-golden"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-white hover:text-golden"><i data-feather="twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-golden">Home</a></li>
+                        <li><a href="about.html" class="hover:text-golden">About</a></li>
+                        <li><a href="#" class="text-golden">Menu</a></li>
+</ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 mt-1"></i>
+                            <span>123 Food Street, Nagpur, Maharashtra</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="mr-2"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="mr-2"></i>
+                            <span>contact@spizynation.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Opening Hours</h4>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>11AM - 11PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday - Sunday</span>
+                            <span>10AM - 11:30PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 SpizyNation. All rights reserved.</p>
+</div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Menu category switching
+        const categories = document.querySelectorAll('.menu-category');
+        const sections = document.querySelectorAll('.menu-section');
+        
+        categories.forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories
+                categories.forEach(c => c.classList.remove('active'));
+                // Add active class to clicked category
+                category.classList.add('active');
+                
+                // Hide all sections
+                sections.forEach(section => section.classList.add('hidden'));
+                // Show selected section
+                const sectionId = category.getAttribute('data-category');
+                document.getElementById(sectionId).classList.remove('hidden');
+            });
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
